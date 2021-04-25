@@ -78,7 +78,6 @@ class Checker:
             for item in source:
                 _item = item.copy()
                 _id += 1
-                _log(f'_id: {_id}')
                 _item['row_id'] = _id
                 _item['balance'] = _get_random_int()
                 data.append(_item)
@@ -99,8 +98,8 @@ class Checker:
 
 
 def main():
-    checker = Checker()
     unique_fields = ('user', 'age', 'lang_id',)
+    checker = Checker()
     checker.check_source(unique_fields=unique_fields)
 
 
